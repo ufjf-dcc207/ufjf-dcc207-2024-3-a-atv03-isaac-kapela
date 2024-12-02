@@ -8,7 +8,7 @@ function App() {
     <>
       <div className='app'>
 
-        <Animal></Animal>
+        <Animal icone="🦁" nome ="leao" peso={140} extincao={true} ></Animal>
 
       </div>
     </>
