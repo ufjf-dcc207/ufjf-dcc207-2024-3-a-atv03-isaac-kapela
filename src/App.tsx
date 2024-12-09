@@ -13,20 +13,15 @@ const ANIMAIS: AnimaisTuplaType[] = [
 
 function App() {
   const exA1: ReactNode[] = [];
-  const exB2: ReactNode[] = [];
-  for (let i = 0; i < ANIMAIS.length; i++) {
-    let ex = ANIMAIS[i][2] < 200.0? exA1 : exB2;
-    
-       
-      ex.push(
-        <Animal 
-          icone={ANIMAIS[i][0]} 
-          nome={ANIMAIS[i][1]}
-          peso={ANIMAIS[i][2]} 
-          extincao={ANIMAIS[i][3]}
-        />
-      );
-    }
+  const exB2: ReactNode[] = ANIMAIS.map(function(animal){
+    return <Animal 
+    icone={animal[0]} 
+    nome={animal[1]}
+    peso={animal[2]} 
+    extincao={animal[3]}
+  />
+  });
+  
   
       
   
