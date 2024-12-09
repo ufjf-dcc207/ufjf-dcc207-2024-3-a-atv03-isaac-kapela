@@ -1,0 +1,26 @@
+.exibicao {
+    display: grid;
+    grid-template-areas: 
+        "cercado inicio fim"
+        "animais animais animais";
+    padding: 1em;
+    box-shadow: 0.1em 0.2em 0.2em;
+        .inicio {
+            color: darkgreen;
+            grid-area: inicio;
+        }
+        .fim {
+            color: darkred;
+            grid-area: fim;
+        }
+        .local {
+            font-size: bold;
+            grid-area: cercado;
+        }
+        .animais {
+            grid-area: animais;
+            display: grid;
+            gap: 0.3em;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+    }
