@@ -15,8 +15,10 @@ function App() {
   const exA1: ReactNode[] = [];
   const exB2: ReactNode[] = [];
   for (let i = 0; i < ANIMAIS.length; i++) {
-    if( ANIMAIS[i][2] < 200.0){
-      exA1.push(
+    let ex = ANIMAIS[i][2] < 200.0? exA1 : exB2;
+    
+       
+      ex.push(
         <Animal 
           icone={ANIMAIS[i][0]} 
           nome={ANIMAIS[i][1]}
@@ -25,19 +27,10 @@ function App() {
         />
       );
     }
-    else{
-      exB2.push(
-        <Animal 
-          icone={ANIMAIS[i][0]} 
-          nome={ANIMAIS[i][1]}
-          peso={ANIMAIS[i][2]} 
-          extincao={ANIMAIS[i][3]}
-        />
-      )
-    }
+  
       
   
-  }
+  
 
   return (
     <div className='app'>
